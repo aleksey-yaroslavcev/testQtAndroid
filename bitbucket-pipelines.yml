@@ -1,0 +1,15 @@
+options:
+  docker: true
+
+
+pipelines:
+  custom:
+    build:
+     - step:
+        name: Build
+        image: winie/qt-android-build
+        script:
+            - qmake
+            - make
+        artifacts:
+            - _bin/**
