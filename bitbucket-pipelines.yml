@@ -14,7 +14,7 @@ pipelines:
             - mkdir _result
             - mkdir _install
             - make install
-            - cd _install; androiddeployqt --output ../_result
+            - androiddeployqt --output _result
             - ls -la ./
             - ls -la ./_bin/
             - ls -la ./_result/
