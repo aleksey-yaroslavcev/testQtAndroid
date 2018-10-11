@@ -11,5 +11,7 @@ pipelines:
         script:
             - qmake
             - make
+            - ls -la ./
+            - ls -la ./_bin/
         artifacts:
             - _bin/**
