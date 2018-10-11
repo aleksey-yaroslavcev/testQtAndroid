@@ -11,7 +11,14 @@ pipelines:
         script:
             - qmake
             - make
+            - mkdir _result
+            - mkdir _install
+            - make install --prefix _install
+            - cd _install; androiddeployqt.exe --output ../_result
             - ls -la ./
             - ls -la ./_bin/
+            - ls -la ./_result/
         artifacts:
             - _bin/**
+            - _install/**
+            - _result/**
