@@ -40,6 +40,6 @@ FORMS += \
         MainWindow.ui
 
 # Default rules for deployment.
-qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
+qnx: target.path = _install
+else: unix:!android: target.path = _install
 !isEmpty(target.path): INSTALLS += target
