@@ -7,6 +7,3 @@ DESTDIR = $$top_builddir
 
 SOURCES += \
     main.cpp
-
-target.path = $$[QT_INSTALL_EXAMPLES]/gui/analogclock
-INSTALLS += target
