@@ -12,13 +12,12 @@ pipelines:
             - qmake
             - make
             - mkdir _result
-            - mkdir _install
-            - make install
-            - androiddeployqt --output _result
+            - make install INSTALL_ROOT=./_result/
+            - cp android-libtestAndroid.so-deployment-settings.json android-libtestandroid.so-deployment-settings.json
+            - androiddeployqt --output _result --verbose --gradle
             - ls -la ./
             - ls -la ./_bin/
             - ls -la ./_result/
         artifacts:
             - _bin/**
-            - _install/**
             - _result/**
