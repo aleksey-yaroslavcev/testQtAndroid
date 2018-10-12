@@ -13,7 +13,7 @@ pipelines:
             - make
             - mkdir _result
             - make install INSTALL_ROOT=./_result/
-            - cp android-libtestAndroid.so-deployment-settings.json android-libtestandroid.so-deployment-settings.json
+            - cp android-libtestAndroid.so-deployment-settings.json android-libbuild.so-deployment-settings.json
             - androiddeployqt --output _result --verbose --gradle
             - ls -la ./
             - ls -la ./_bin/
